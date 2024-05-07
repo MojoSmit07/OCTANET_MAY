@@ -1,0 +1,218 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Base styles */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+/* Layout styles */
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top section */
+.top {
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(brady-bellini-_hpk_92Crhs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.top .overlay {
+    width: 100%;
+    min-height: inherit;
+    background-color: rgba(0, 0, 0, 0.295);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    color: var(--secondary-color);
+}
+
+.text h1 {
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+.text .image {
+    background-image: url(pexels-lizromo24-1999579.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 220px;
+}
+
+.rtext {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rtext p {
+    font-size: 0.8rem;
+}
+
+/* Bottom section */
+.bottom {
+    display: flex;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.bottom > div {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.b1 {
+    width: 30%;
+    min-height: inherit;
+    background-image: url(pexels-8moments-1323550.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.b2 {
+    width: 30%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.b2 .up {
+    width: 100%;
+    min-height: 20vh;
+    background-image: url(pexels-eberhardgross-844297.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.b2 .down {
+    width: 100%;
+    min-height: 20vh;
+    background-image: url(pexels-minan1398-1406866.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.b2 .down .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.344);
+}
+
+.b3 {
+    width: 40%;
+    min-height: inherit;
+    background-image: url(searching-discovery-perforated-paper-magnifying-glass.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.b3 .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.b3 .overlay p {
+    margin-bottom: 1rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 5vw;
+    }
+
+    .text .image {
+        height: 200px;
+        width: 140px;
+        margin-top: 1rem;
+    }
+
+    .rtext {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .rtext p {
+        margin-top: 0.5rem;
+    }
+
+    .b3 .overlay {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom {
+        flex-direction: column;
+    }
+
+    .b1, .b2, .b3 {
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    .b3 {
+        background-position: left;
+    }
+
+    .b3 .overlay {
+        position: static;
+        width: 100%;
+        padding: 1rem;
+    }
+}
